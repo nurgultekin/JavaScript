@@ -1,0 +1,115 @@
+<script>
+
+  // Functions are a way to store a re-usable snippet of code in a block which can
+  // be run later. For example, this function would print the current time when invoked:
+
+  const printCurrentTime = () => {
+    const currentTime = new Date()
+    return currentTime.toLocaleTimeString()
+  }
+
+  // Task 1: Invoke the printCurrentTime function inside a console.log():
+
+console.log(printCurrentTime())
+  // Task 2: Write a function which, when invoked, prints your name. Then invoke it twice.
+
+
+  // Task 3: Write a function called `printGreeting`. When invoked using the examples
+  // below, it should print "Hello Bob" or "Hello Sue":
+  //
+  // printGreeting("Bob") // This should print "Hello Bob"
+  // printGreeting("Sue") // This should print "Hello Sue"
+
+  let printGreeting = (name) => {
+  return "Hello " + name;
+}
+
+let name = "Nur";
+console.log(printGreeting(name));
+
+name = "Nils";
+console.log(printGreeting(name));
+
+
+let GreetingBoth =(name1, name2)=> {
+  return "Hello " + name1 + " and " + name2;
+}
+
+console.log(GreetingBoth("Nur", "Nils"))
+
+
+
+  // Task 4: Write a function called `multiply` which multiplies two numbers together and returns the value
+  // so that it can be stored in a variable. See the example below to see how it should work.
+  //
+
+function multiply(number1, number2) {
+return number1 * number2;
+}
+
+const first = multiply(2, 2);
+console.log(`First number is ${first}`);
+
+const second = multiply(100, 4);
+console.log(`Second number is ${second}`); 
+
+ 
+// Task 5: Write a function called `warmEnough` which takes the current temperature as an argument and returns
+// `true` if it is greater than 10 and false otherwise. Comment out the code below to invoke the
+// function. It should print "Go for a run!"
+// 
+
+function warmEnough(temperature) {
+  if (temperature > 10) {
+    console.log("Go for a run!");
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(warmEnough(15))
+
+
+// EXCERCISES 25/10/2023 WORKSHOP
+
+// Fruit machine function
+
+  const printFruit = (fruit) => {
+  return fruit + "-juice";
+};
+
+const fruit = "äpple";
+console.log(printFruit(fruit));
+
+
+// TV remote control
+
+function kanalChange (kanal) {
+  return "Du ser på kanal 1";
+}
+
+let kanal = 1;
+console.log(kanalChange(kanal))
+
+
+// Trängsel skatt
+
+const trangselSkatt = (hour) => {
+  if (hour >= 12 && hour < 15) {
+    if (hour === 13) {
+      return "20 kr";
+    } else {
+      return "10 kr";
+    }
+  } else {
+    return "No congestion charge";
+  }
+};
+
+const currentHour = 13; 
+const charge = trangselSkatt(currentHour);
+console.log(charge);
+</script>
+
+<p>Open the console in the browser to see the output of this script.</p>
